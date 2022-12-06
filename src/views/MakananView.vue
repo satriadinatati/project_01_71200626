@@ -1,8 +1,6 @@
 <template>
     <div class="home">
-      <ItemComponent link="https://nos.jkt-1.neo.id/serverless-image-op-0/fd9ee9d9c0265b24bce789412bb0d5df" judul="Gigamac"></ItemComponent>
-      <ItemComponent link="https://nos.jkt-1.neo.id/serverless-image-op-0/fd9ee9d9c0265b24bce789412bb0d5df" judul="Gigamac"></ItemComponent>
-      <ItemComponent link="https://nos.jkt-1.neo.id/serverless-image-op-0/fd9ee9d9c0265b24bce789412bb0d5df" judul="Gigamac"></ItemComponent>
+      <ItemComponent @click="detail(item.id)" v-for="item in this.$store.state.makanan" :key="item.id" :link="item.link" :judul="item.judul"></ItemComponent>
     </div>
 </template>
   
@@ -15,7 +13,12 @@ import ItemComponent from '@/components/ItemComponent.vue'
     name: 'MakananView',
     components: {
       ItemComponent
-    }
+    },
+    methods: {
+        detail(id){
+            this.$router.push('/detailMakanan/'+id);
+        }
+    },
   }
 </script>
 <style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="image">
+    <div class="item">
       <img :src=link alt="">
       <h2>{{judul}}</h2>
     </div>
@@ -16,8 +16,16 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.image{
-    
+.item img{
+    height: 150px;
+}
+
+.item{
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 </style>
   
