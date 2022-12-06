@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-      <ItemComponent @click="detail(item.id)" v-for="item in this.$store.state.makanan" :key="item.id" :link="item.link" :judul="item.judul"></ItemComponent>
+      <ItemComponent @click="detail(item.id)" v-for="item in this.$store.state.snack" :key="item.id" :link="item.link" :judul="item.judul"></ItemComponent>
     </div>
 </template>
   
